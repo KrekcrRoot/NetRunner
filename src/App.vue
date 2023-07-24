@@ -1,17 +1,16 @@
 <script lang="ts">
-import HeaderComponent from "./components/HeaderComponent.vue";
 import FooterComponent from "./components/FooterComponent.vue";
 
 export default {
   name: 'App',
-  components: {FooterComponent, HeaderComponent },
+  components: {FooterComponent},
 }
 </script>
 
 <template>
-  <header-component />
   <router-view></router-view>
   <footer-component />
 </template>
 
-<style></style>
+<style lang="scss">
+</style>

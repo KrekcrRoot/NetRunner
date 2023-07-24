@@ -9,6 +9,6 @@ export default {
   </footer>
 </template>
 
-<style lang="ts" scoped>
+<style lang="scss" scoped>
 
 </style>
