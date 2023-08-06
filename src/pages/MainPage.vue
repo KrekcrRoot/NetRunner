@@ -27,7 +27,7 @@ export default {
         <img src="/assets/decor.svg" alt="">
       </div>
       <p class="main__about">Cообщество исследователей в сфере практической информационной безопасности</p>
-      <a href="/products" class="btn">Перейти к продуктам</a>
+      <a href="/products" class="btn big-btn">Перейти к продуктам</a>
     </div>
   </main>
 </template>
@@ -60,20 +60,6 @@ main {
     font-size: 2.5rem;
     width: 40vw;
     margin: 3rem 0;
-  }
-
-  .btn {
-    background: #41583D;
-    border-radius: 24px;
-    color: white;
-    padding: 2rem 6rem;
-    text-decoration: none;
-    width: max-content;
-    font-size: 2.5rem;
-    text-transform: uppercase;
-    display: flex;
-    align-items: center;
-    justify-content: center;
   }
 }
 
