@@ -30,6 +30,11 @@ header {
   background: rgba(0, 0, 0, 0.63);
   justify-content: space-between;
   border-radius: 0 0 16px 16px;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  width: 100%;
 
   .header__telegram {
     height: 90%;

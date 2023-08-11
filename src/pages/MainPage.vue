@@ -1,24 +1,16 @@
 <script lang="ts">
 import HeaderComponent from "../components/HeaderComponent.vue";
-import ButtonComponent from "../components/header/ButtonComponent.vue";
+import DefaultHeaderComponent from "../components/header/DefaultHeaderComponent.vue";
 
 export default {
   name: 'MainPage',
-  components: {ButtonComponent, HeaderComponent},
+  components: {DefaultHeaderComponent, HeaderComponent},
 }
 </script>
 
 <template>
   <header-component>
-    <button-component>
-      Главная
-    </button-component>
-    <button-component>
-      Партнёры
-    </button-component>
-    <button-component>
-      Контакты
-    </button-component>
+    <default-header-component />
   </header-component>
   <main>
     <div class="container">

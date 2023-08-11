@@ -1,26 +1,18 @@
 <script lang="ts">
 
+import DefaultHeaderComponent from "../components/header/DefaultHeaderComponent.vue";
 import HeaderComponent from "../components/HeaderComponent.vue";
-import ButtonComponent from "../components/header/ButtonComponent.vue";
 
 export default {
   name: 'ProductsPage',
-  components: {ButtonComponent, HeaderComponent},
+  components: {DefaultHeaderComponent, HeaderComponent},
 }
 
 </script>
 
 <template>
   <header-component>
-    <button-component link="/">
-      Главная
-    </button-component>
-    <button-component>
-      Партнеры
-    </button-component>
-    <button-component>
-      Контакты
-    </button-component>
+    <default-header-component />
   </header-component>
   <main>
     <div class="container">
@@ -35,7 +27,7 @@ export default {
           С доступными на данный момент курсами вы можете ознакомится по кнопке.
         </p>
 
-        <a href="" class="btn">Перейти к курсам</a>
+        <a href="/courses" class="btn">Перейти к курсам</a>
       </section>
 
       <section>
