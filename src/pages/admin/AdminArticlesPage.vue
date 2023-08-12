@@ -8,6 +8,11 @@ import ElementComponent from "../../components/courses/ElementComponent.vue";
 export default defineComponent({
   name: 'AdminArticlesPage',
   components: {ElementComponent, ContentComponent, ButtonComponent, HeaderComponent},
+  data() {
+    return {
+      addPanelOpened: false,
+    }
+  },
 })
 </script>
 
@@ -20,9 +25,14 @@ export default defineComponent({
   <main>
     <div class="container">
       <content-component title="Редактор статей">
-        <element-component title="Урок 1" btn="Изменить" />
+        <template v-if="!addPanelOpened">
+          <element-component title="Урок 1" btn="Изменить" />
 
-        <a class="button">Добавить</a>
+          <a class="button" @click="">Добавить</a>
+        </template>
+        <template>
+
+        </template>
       </content-component>
     </div>
   </main>
