@@ -5,6 +5,8 @@ import DefaultHeaderComponent from "../components/header/DefaultHeaderComponent.
 export default {
   name: 'MainPage',
   components: {DefaultHeaderComponent, HeaderComponent},
+  created() {
+  }
 }
 </script>
 

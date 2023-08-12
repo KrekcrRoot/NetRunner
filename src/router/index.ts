@@ -10,8 +10,23 @@ import ArticlePage from "../pages/user/ArticlePage.vue";
 import AdminCoursesPage from "../pages/admin/AdminCoursesPage.vue";
 import AdminAddCoursePage from "../pages/admin/AdminAddCoursePage.vue";
 import AdminArticlesPage from "../pages/admin/AdminArticlesPage.vue";
+import AuthMiddleware from "../AuthMiddleware.vue";
 
 const routes: RouteRecordRaw[] = [
+
+    /**
+     * Little middleware
+     */
+    {
+        path: '/auth',
+        name: 'AuthMiddleware',
+        component: AuthMiddleware,
+        meta: {
+            auth: false,
+            guestOnly: false,
+            admin: false,
+        },
+    },
     {
         path: '/:pathMatch(.*)*',
         name: 'NotFoundPage',
@@ -22,6 +37,7 @@ const routes: RouteRecordRaw[] = [
             admin: false,
         },
     },
+
     {
         path: '/',
         name: 'MainPage',

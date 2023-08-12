@@ -1,6 +1,20 @@
 <script lang="ts">
+import {useUserStore} from "../store/UserStore.ts";
+import ButtonComponent from "./header/ButtonComponent.vue";
+
 export default {
   name: 'HeaderComponent',
+  components: {ButtonComponent},
+  setup() {
+    return {
+      user: useUserStore(),
+    }
+  },
+  data() {
+    return {
+      link: 'http://localhost:8180/realms/netrunner-realm/protocol/openid-connect/auth?response_type=code&client_id=netrunner-courses-client&state=sidyuf8s67dfisdgf&scope=openid profile&redirect_uri=http://localhost:5173/auth&code_challenge=UKdJz9LRT0J9iE6nnm3fVC9CeykpV09Yk4ykqSyk3rI&code_challenge_method=S256',
+    }
+  },
 }
 </script>
 
@@ -13,11 +27,28 @@ export default {
 
     <div class="header__buttons">
       <ul>
+        <button-component link="/">Главная</button-component>
         <slot></slot>
       </ul>
     </div>
 
-    <button class="header__btn header__submit">Войти</button>
+    <template v-if="user.isLogged && user.roles.includes('admin')">
+      <a href="/admin/panelAccess" class="header__btn header__submit header__admin">
+        Админ
+      </a>
+    </template>
+    <template v-else-if="user.isLogged">
+      <a href="/courses" class="header__btn header__submit">
+        {{ user.email }}
+      </a>
+    </template>
+    <template v-else>
+      <a :href="link" class="header__btn header__submit">
+        Войти
+      </a>
+    </template>
+
+
 
   </header>
 </template>
@@ -69,6 +100,10 @@ header {
     font-size: 1.5rem;
     padding: 1rem 5rem;
     transition: all 0.15s ease;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .header__submit {
@@ -78,6 +113,11 @@ header {
     &:hover {
       background: rgba(140, 199, 94, 0.9);
     }
+  }
+
+  .header__admin {
+    color: white;
+    background: #CDC261B2;
   }
 }
 </style>

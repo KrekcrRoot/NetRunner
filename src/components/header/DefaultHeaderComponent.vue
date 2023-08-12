@@ -9,9 +9,6 @@ export default defineComponent({
 </script>
 
 <template>
-  <button-component link="/">
-    Главная
-  </button-component>
   <button-component>
     Партнёры
   </button-component>
