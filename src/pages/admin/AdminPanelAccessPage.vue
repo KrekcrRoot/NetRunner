@@ -14,7 +14,7 @@ export default defineComponent({
 <template>
   <header-component>
     <button-component>Доступ</button-component>
-    <button-component>Оффлайн</button-component>
+    <button-component link="/admin/offline">Оффлайн</button-component>
     <button-component link="/admin/courses">Курсы</button-component>
   </header-component>
   <main>

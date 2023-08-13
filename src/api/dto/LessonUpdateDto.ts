@@ -1,12 +1,10 @@
-interface Lesson {
 
-    id?: number
+interface LessonUpdateDto {
+    id: string
     title: string
     description: string
     body: string
-    accessCode?: string
     enabled: boolean
-
 }
 
-export default Lesson
+export default LessonUpdateDto

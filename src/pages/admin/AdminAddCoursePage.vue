@@ -38,7 +38,6 @@ export default defineComponent({
 
         </CenterComponent>
 
-
       </content-component>
     </div>
   </main>

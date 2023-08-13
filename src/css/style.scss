@@ -13,9 +13,9 @@ body {
         rgba(0, 0, 0, 0.5),
         rgba(0, 0, 0, 0.5)
     ),
-    url("/assets/background.jpeg");
+    url("/assets/background.jpeg") fixed;
     background-size: cover;
-    background-attachment: fixed;
+    //background-attachment: fixed;
 }
 
 main {
@@ -27,6 +27,20 @@ main {
     width: 100%;
     display: flex;
     flex-direction: column;
+}
+
+.Toastify__toast-body {
+    div {
+        color: whitesmoke !important;
+    }
+}
+
+.Toastify__progress-bar-theme--light {
+    background: red;
+}
+
+.Toastify__toast-theme--colored.Toastify__toast--default, .Toastify__toast-theme--light {
+    background-color: #404040;
 }
 
 @media screen and (max-width: 750px) {

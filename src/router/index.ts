@@ -11,6 +11,8 @@ import AdminCoursesPage from "../pages/admin/AdminCoursesPage.vue";
 import AdminAddCoursePage from "../pages/admin/AdminAddCoursePage.vue";
 import AdminArticlesPage from "../pages/admin/AdminArticlesPage.vue";
 import AuthMiddleware from "../AuthMiddleware.vue";
+import AdminOfflinePage from "../pages/admin/AdminOfflinePage.vue";
+import AdminOfflineArticleAddPage from "../pages/admin/AdminOfflineArticleAddPage.vue";
 
 const routes: RouteRecordRaw[] = [
 
@@ -141,6 +143,30 @@ const routes: RouteRecordRaw[] = [
         path: '/admin/articles',
         name: 'Admin.ArticlesPage',
         component: AdminArticlesPage,
+        meta: {
+            auth: true,
+            guestOnly: false,
+            admin: true,
+        },
+    },
+
+    /*
+    * Offline Admin Pages
+    * */
+    {
+        path: '/admin/offline',
+        name: 'Admin.OfflinePage',
+        component: AdminOfflinePage,
+        meta: {
+            auth: true,
+            guestOnly: false,
+            admin: true,
+        },
+    },
+    {
+        path: '/admin/articles/add',
+        name: 'Admin.OfflineArticleAddPage',
+        component: AdminOfflineArticleAddPage,
         meta: {
             auth: true,
             guestOnly: false,

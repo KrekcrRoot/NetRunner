@@ -24,6 +24,8 @@
     "**/*.ts",
     "**/*.tsx",
     "global.d.ts",
-    "dist/*.js",],
+    "dist/*.js",
+    "src/dto/*.ts"
+  ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

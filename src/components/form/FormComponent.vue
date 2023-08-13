@@ -3,11 +3,16 @@ import {defineComponent} from 'vue'
 
 export default defineComponent({
   name: 'FormComponent',
+  methods: {
+    submit() {
+      this.$emit('submitted')
+    }
+  }
 })
 </script>
 
 <template>
-  <form>
+  <form @submit.prevent="submit">
     <slot></slot>
   </form>
 </template>

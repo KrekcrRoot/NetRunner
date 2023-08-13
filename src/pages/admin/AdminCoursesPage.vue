@@ -27,7 +27,7 @@ export default defineComponent({
         <element-component title="Pentest Fundamental" btn="Изменить" />
         <element-component title="Pentest Fundamental" btn="Изменить" />
 
-        <a class="button">Добавить</a>
+        <a class="button" href="/admin/courses/add">Добавить</a>
       </content-component>
     </div>
   </main>
